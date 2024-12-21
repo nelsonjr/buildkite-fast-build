@@ -9,7 +9,7 @@ steps:
     #       image: "python:3.12.8"
     #       workdir: /app
     artifact_paths:
-      - "/var/lib/buildkite-agent/.local/lib/python3.9/**"
+      - "/var/lib/buildkite-agent/.local/lib/python3.9/**/*"
     key: build
   - label: ":hammer: Test"
     commands:
