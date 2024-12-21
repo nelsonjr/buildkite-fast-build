@@ -3,13 +3,13 @@ steps:
     commands:
       - cd pyapp
       - pip3 install -r requirements.txt
-      # - find / -name "*ansi*"
+      - find / -name "*ansi*" 2>/dev/null
     # plugins:
     #   - docker#v3.2.0:
     #       image: "python:3.12.8"
     #       workdir: /app
-    artifact_paths:
-      - "/usr/local/lib/python3.9/**"
+    # artifact_paths:
+    #   - "/usr/local/lib/python3.9/**"
     key: build
   - label: ":hammer: Test"
     commands:
