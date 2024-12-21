@@ -1,0 +1,4 @@
+steps:
+  - label: ":hammer: Build"
+    command: "python python/main.py"
+    key: build
