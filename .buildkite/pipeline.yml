@@ -1,3 +1,9 @@
 steps:
+  - label: ":mag: Debug"
+    command: |
+      echo "Checking directory structure:"
+      ls -R
+      echo "Current working directory:"
+      pwd
   - label: ":hammer: Build"
     command: "python python/main.py"
