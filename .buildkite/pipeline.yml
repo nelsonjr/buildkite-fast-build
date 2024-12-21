@@ -1,4 +1,7 @@
 steps:
+  - label: ":hammer: Clean"
+    commands:
+      - rm -rf /var/lib/buildkite-agent/.local/lib/python3.9/site-packages/
   - label: ":hammer: Build"
     commands:
       - cd pyapp
