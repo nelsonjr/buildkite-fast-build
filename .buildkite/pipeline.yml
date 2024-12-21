@@ -8,6 +8,8 @@ steps:
       - docker#v3.2.0:
           image: "python:3.12.8"
           workdir: /app
+    artifact_paths:
+      - "/usr/local/lib/python3.12/**"
     key: build
   - label: ":hammer: Test"
     command: "python3 pyapp/main.py"
