@@ -1,9 +1,14 @@
 steps:
   - label: ":mag: Debug"
     command: |
-      echo "Checking directory structure:"
+      echo "Listing files in current directory:"
       ls -R
       echo "Current working directory:"
       pwd
   - label: ":hammer: Build"
-    command: "python python/main.py"
+    command: |
+      if [ ! -f python/main.py ]; then
+        echo "Error: python/main.py not found!"
+        exit 1
+      fi
+      python python/main.py
