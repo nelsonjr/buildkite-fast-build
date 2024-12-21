@@ -1,7 +1,7 @@
 steps:
-  - label: ":hammer: Clean"
-    commands:
-      - rm -rf /var/lib/buildkite-agent/.local/lib/python3.9/site-packages/
+  #- label: ":hammer: Clean"
+  #  commands:
+  #    - rm -rf /var/lib/buildkite-agent/.local/lib/python3.9/site-packages/
   - label: ":hammer: Build"
     commands:
       - cd pyapp
@@ -14,9 +14,9 @@ steps:
     artifact_paths:
       - "/var/lib/buildkite-agent/.local/lib/python3.9/**/*"
     key: build
-  - label: ":hammer: Clean II"
-    commands:
-      - rm -rf /var/lib/buildkite-agent/.local/lib/python3.9/site-packages/
+  #- label: ":hammer: Clean II"
+  #  commands:
+  #    - rm -rf /var/lib/buildkite-agent/.local/lib/python3.9/site-packages/
   - label: ":hammer: Test"
     commands:
       - buildkite-agent artifact download "/var/lib/buildkite-agent/.local/lib/python3.9/**/*" .
