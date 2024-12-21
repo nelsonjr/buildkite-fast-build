@@ -3,6 +3,10 @@ steps:
     commands:
       - cd pyapp
       - pip3 install -r requirements.txt
+    plugins:
+      - docker#v3.2.0:
+          image: "python:3.12.8"
+          workdir: /app
     key: build
   - label: ":hammer: Test"
     command: "python3 pyapp/main.py"
