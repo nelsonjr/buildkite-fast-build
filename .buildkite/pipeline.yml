@@ -1,4 +1,9 @@
 steps:
+  - label: ":hammer: Build"
+    commands:
+      - cd pyapp
+      - pip install -r requirements.txt
+    key: build
   - label: ":hammer: Test"
-    command: "python3 python/main.py"
+    command: "python3 pyapp/main.py"
     key: test
