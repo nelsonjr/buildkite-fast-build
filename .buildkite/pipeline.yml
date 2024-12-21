@@ -19,6 +19,7 @@ steps:
       - rm -rf /var/lib/buildkite-agent/.local/lib/python3.9/site-packages/
   - label: ":hammer: Test"
     commands:
+      - buildkite-agent artifact download "/var/lib/buildkite-agent/.local/lib/python3.9/**/*" .
       - cd pyapp
       - pip3 install -r requirements.txt
       - python3 main.py
